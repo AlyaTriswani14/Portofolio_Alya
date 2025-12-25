@@ -249,46 +249,50 @@
                 </div>
 
                 <!-- About Content -->
-                <div class="glass p-8 md:p-12 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
-                        
+                <div class="glass p-6 md:p-12 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    
                     <!-- Personal Info Grid -->
-                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <!-- Left - Personal Info -->
-                        <div class="space-y-6" data-aos="fade-right" data-aos-delay="300">
-                            <div class="flex items-start">
-                                <span class="text-white font-bold text-base w-40 flex-shrink-0">Name:</span>
+                        <div class="space-y-4 md:space-y-6" data-aos="fade-right" data-aos-delay="300">
+                            <div class="flex items-start flex-col sm:flex-row">
+                                <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">Name:</span>
                                 <span class="text-gray-400 text-base">Alya Triswani</span>
                             </div>
-                            <div class="flex items-start">
-                                <span class="text-white font-bold text-base w-40 flex-shrink-0">Date of birth:</span>
+                            <div class="flex items-start flex-col sm:flex-row">
+                                <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">Date of birth:</span>
                                 <span class="text-gray-400 text-base">December 14, 2004</span>
                             </div>
-                            <div class="flex items-start">
-                                <span class="text-white font-bold text-base w-40 flex-shrink-0">Address:</span>
+                            <div class="flex items-start flex-col sm:flex-row">
+                                <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">Address:</span>
                                 <span class="text-gray-400 text-base">Toba, Sumatera Utara</span>
                             </div>
-                            <div class="flex items-start">
-                                <span class="text-white font-bold text-base w-40 flex-shrink-0">Email:</span>
-                                <a href="mailto:alyatriswani@gmail.com" class="text-cyan-400 hover:text-cyan-300 transition text-base">alyatriswani@gmail.com</a>
+                            <div class="flex items-start flex-col sm:flex-row">
+                                <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">Email:</span>
+                                <a href="mailto:alyatriswani@gmail.com" class="text-cyan-400 hover:text-cyan-300 transition text-base break-all">alyatriswani@gmail.com</a>
                             </div>
-                            <div class="flex items-start">
-                                <span class="text-white font-bold text-base w-40 flex-shrink-0">Phone:</span>
+                            <div class="flex items-start flex-col sm:flex-row">
+                                <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">Phone:</span>
                                 <a href="tel:+6282165548017" class="text-cyan-400 hover:text-cyan-300 transition text-base">+6282165548017</a>
+                            </div>
+                            
+                            <!-- Download CV Button -->
+                            <div class="mt-8 pt-6 border-t border-white/10">
+                                <a href="documents/CV_Alya_Triswani.pdf" download class="btn-glow px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-semibold inline-flex items-center hover:shadow-2xl transition-all">
+                                    <i class="fas fa-download mr-3"></i>Download CV
+                                </a>
                             </div>
                         </div>
 
                         <!-- Right - Photo -->
-                        <div class="flex justify-center" data-aos="fade-left" data-aos-delay="400">
+                        <div class="flex justify-center order-first md:order-last" data-aos="fade-left" data-aos-delay="400">
                             <div class="relative group">
-                                <div class="w-80 h-80 glass rounded-2xl overflow-hidden border-2 border-cyan-500/30 group-hover:border-cyan-500/60 transition-all duration-300">
-                                    <!-- Placeholder Image -->
-                                   <div class="w-80 h-80 glass rounded-2xl overflow-hidden border-2 border-cyan-500/30 group-hover:border-cyan-500/60 transition-all duration-300">
-                                     <img src="images/foto_about.JPG" alt="Alya Triswani" class="w-full h-full object-cover object-center">
-                                    </div>
+                                <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 glass rounded-2xl overflow-hidden border-2 border-cyan-500/30 group-hover:border-cyan-500/60 transition-all duration-300">
+                                    <img src="images/foto_about.JPG" alt="Alya Triswani" class="w-full h-full object-cover object-center">
+                                </div>
                                 <!-- Decorative corner accents -->
-                                <div class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-cyan-400"></div>
-                                <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-cyan-400"></div>
+                                <div class="absolute -top-2 -left-2 w-4 h-4 md:w-6 md:h-6 border-t-2 border-l-2 border-cyan-400"></div>
+                                <div class="absolute -bottom-2 -right-2 w-4 h-4 md:w-6 md:h-6 border-b-2 border-r-2 border-cyan-400"></div>
                             </div>
                         </div>
                     </div>
@@ -659,6 +663,38 @@
                 <!-- Certificate 1 -->
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-certificate text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-orange-400 mb-2">HCIA-AI V4.0 Course</h3>
+                            <p class="text-gray-400 text-sm mb-3">Huawei • 2025</p>
+                            <a href="https://drive.google.com/drive/folders/1a3Diienu86oHOB_JNITZ-1FvEXxI6see?usp=sharing" target="_blank" class="inline-flex items-center text-blue-400 hover:text-cyan-400 transition text-sm">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-certificate text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-indigo-400 mb-2">Artificial Intelligence Technology and Applications</h3>
+                            <p class="text-gray-400 text-sm mb-3">Huawei • 2025</p>
+                            <a href="https://drive.google.com/drive/folders/1a3Diienu86oHOB_JNITZ-1FvEXxI6see?usp=sharing" target="_blank" class="inline-flex items-center text-blue-400 hover:text-cyan-400 transition text-sm">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start gap-4">
                         <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-certificate text-2xl"></i>
                         </div>
@@ -672,15 +708,15 @@
                     </div>
                 </div>
                 
-                <!-- Certificate 2 -->
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                <!-- Certificate 4 -->
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex items-start gap-4">
                         <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-certificate text-2xl"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-lg font-bold text-purple-400 mb-2">C Programming Bootcamp</h3>
-                            <p class="text-gray-400 text-sm mb-3">The Complete C Language Course • 2024</p>
+                            <p class="text-gray-400 text-sm mb-3">Udemy • 2024</p>
                             <a href="https://drive.google.com/drive/folders/1a3Diienu86oHOB_JNITZ-1FvEXxI6see?usp=sharing" target="_blank" class="inline-flex items-center text-blue-400 hover:text-cyan-400 transition text-sm">
                                 <i class="fas fa-external-link-alt mr-2"></i>View Certificate
                             </a>
@@ -688,8 +724,8 @@
                     </div>
                 </div>
                 
-                <!-- Certificate 3 -->
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+                <!-- Certificate 5 -->
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="500">
                     <div class="flex items-start gap-4">
                         <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-certificate text-2xl"></i>
@@ -705,7 +741,7 @@
                 </div>
                 
                 <!-- View All Certificates -->
-                <div class="glass-card p-6 rounded-2xl flex items-center justify-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="glass-card p-6 rounded-2xl flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
                     <a href="https://drive.google.com/drive/folders/1a3Diienu86oHOB_JNITZ-1FvEXxI6see?usp=sharing" target="_blank" class="btn-glow px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-semibold inline-flex items-center">
                         <i class="fab fa-google-drive mr-3 text-xl"></i>View All Certificates
                     </a>
@@ -792,6 +828,9 @@
                     </a>
                     <a href="tel:+6282185548017" class="btn-glow px-8 py-4 glass rounded-full font-semibold hover:bg-white/10 flex items-center">
                         <i class="fas fa-phone mr-3"></i>Phone
+                    </a>
+                    <a href="https://www.kaggle.com/alyatriswani/" target="_blank" class="btn-glow px-8 py-4 glass rounded-full font-semibold hover:bg-white/10 flex items-center">
+                        <i class="fab fa-kaggle mr-3"></i>Kaggle
                     </a>
                 </div>
             </div>
