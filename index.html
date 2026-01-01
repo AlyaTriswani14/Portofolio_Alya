@@ -138,9 +138,60 @@
         .mobile-menu.active {
             transform: translateX(0);
         }
+        
+        /* Custom Cursor - Professional Smoke Effect */
+        .cursor {
+            display: none;
+        }
+        
+        .cursor-smoke {
+            position: fixed;
+            width: 40px;
+            height: 50px;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0;
+            animation: smokeFade 1.2s ease-out forwards;
+        }
+        
+        .cursor-smoke::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, 
+                rgba(6, 182, 212, 0.5) 0%, 
+                rgba(59, 130, 246, 0.3) 30%, 
+                rgba(139, 92, 246, 0.2) 60%, 
+                transparent 100%);
+            border-radius: 50% 40% 60% 45%;
+            filter: blur(8px);
+        }
+        
+        @keyframes smokeFade {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+                filter: blur(2px);
+            }
+            15% {
+                opacity: 0.8;
+                transform: translate(-50%, -50%) scale(1) rotate(5deg);
+                filter: blur(6px);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -60%) scale(1.8) rotate(-10deg);
+                filter: blur(15px);
+            }
+        }
     </style>
 </head>
 <body class="gradient-bg text-white">
+    
+    <!-- Custom Cursor Elements -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
     
     <!-- Navbar -->
     <nav class="navbar-blur fixed top-0 left-0 right-0 z-50">
@@ -202,7 +253,7 @@
                     <h2 class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                     
                         <span class="text-blue-400">Software Engineer</span> • 
-                        <span class="text-purple-400">AI Enthusiast</span> • 
+                        <span class="text-purple-400">AI Development</span> • 
                         <span class="text-yellow-400">Data Science</span> • 
                         <span class="text-pink-400">Database Management</span> • 
                         <span class="text-green-400">Systems Analyst</span>
@@ -260,10 +311,6 @@
                                 <span class="text-gray-400 text-base">Alya Triswani</span>
                             </div>
                             <div class="flex items-start flex-col sm:flex-row">
-                                <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">Date of birth:</span>
-                                <span class="text-gray-400 text-base">December 14, 2004</span>
-                            </div>
-                            <div class="flex items-start flex-col sm:flex-row">
                                 <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">Address:</span>
                                 <span class="text-gray-400 text-base">Toba, Sumatera Utara</span>
                             </div>
@@ -274,6 +321,10 @@
                             <div class="flex items-start flex-col sm:flex-row">
                                 <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">Phone:</span>
                                 <a href="tel:+6282165548017" class="text-cyan-400 hover:text-cyan-300 transition text-base">+6282165548017</a>
+                            </div>
+                            <div class="flex items-start flex-col sm:flex-row">
+                                <span class="text-white font-bold text-base w-full sm:w-40 flex-shrink-0 mb-1 sm:mb-0">LinkedIn:</span>
+                                <a href="https://www.linkedin.com/in/alya-triswani" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition text-base break-all">Alya Triswani</a>
                             </div>
                             
                             <!-- Download CV Button -->
@@ -304,11 +355,16 @@
     <!-- Education & Achievements Section -->
     <section id="education" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
-                <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Education & Achievements
-                </span>
-            </h2>
+            <div class="relative text-center mb-16" data-aos="fade-up">
+                <h2 class="text-8xl md:text-9xl font-bold text-white/5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+                    Education
+                </h2>
+                <h2 class="text-4xl md:text-5xl font-bold relative z-10 mb-2">
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        Education & Achievements
+                    </span>
+                </h2>
+            </div>
             
             <div class="grid md:grid-cols-3 gap-8">
                 
@@ -352,11 +408,16 @@
     <!-- Experience Section -->
     <section id="experience" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
-                <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Work Experience
-                </span>
-            </h2>
+            <div class="relative text-center mb-16" data-aos="fade-up">
+                <h2 class="text-8xl md:text-9xl font-bold text-white/5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+                    Experience
+                </h2>
+                <h2 class="text-4xl md:text-5xl font-bold relative z-10 mb-2">
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        Work Experience
+                    </span>
+                </h2>
+            </div>
             
             <div class="max-w-4xl mx-auto space-y-8">
                 
@@ -432,11 +493,16 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
-                <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <div class="relative text-center mb-16" data-aos="fade-up">
+                <h2 class="text-8xl md:text-9xl font-bold text-white/5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
                     Projects
-                </span>
-            </h2>
+                </h2>
+                <h2 class="text-4xl md:text-5xl font-bold relative z-10 mb-2">
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        Projects
+                    </span>
+                </h2>
+            </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
@@ -563,6 +629,54 @@
                     </div>
                 </div>
                 
+                <!-- Project 7 - UI/UX Redesign -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="700">
+                    <img src="images/RKT.png" alt="UI/UX Redesign Project" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-pink-400">Redesign Application Website Rumah Kreative Toba</h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                            Redesigned an existing website interface to enhance <span class="text-white font-semibold">usability and user experience</span> by improving layout, navigation, and visual components, while conducting <span class="text-white font-semibold">system testing</span> to ensure functional accuracy and consistency between design and implementation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-xs">Figma</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs">Draw.io</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">Bizagi</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.figma.com/design/59XGBlMpCpX2qQmqasU7er/UIUX-DESIGN-ALYA?m=auto&t=LcSJh6COzOJuo89A-6" target="_blank" class="btn-glow inline-block px-6 py-2 bg-blue-600/80 hover:bg-blue-600 rounded-full text-sm font-semibold transition">
+                                <i class="fab fa-figma mr-2"></i>View Design
+                            </a>
+                            <a href="https://drive.google.com/file/d/1R0XRUW_UH8_tWVqJ1TRhi4E4cMUPwQlF/view?usp=sharing" target="_blank" class="btn-glow inline-block px-6 py-2 glass rounded-full text-sm font-semibold hover:bg-white/10">
+                                <i class="fab fa-google-drive mr-2"></i>Google Drive
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 - Lakotour -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="800">
+                    <img src="images/lakotour.png" alt="Lakotour Project" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-cyan-400">Lakotour (Lake Toba Tour): Platform Digital Terintegrasi untuk Wisata Kawasan Danau Toba</h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                            Designed website solution from concept to implementation, focusing on <span class="text-white font-semibold">user-centered UI/UX design</span>, optimized navigation, and <span class="text-white font-semibold">system testing</span> to ensure stable and reliable functionality.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs">Figma</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs">Draw.io</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">Bizagi</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.figma.com/design/h8n0Ytrt4OFRm7CGlm9dWN/UXD-Competition-can-be-a-winner---PIXORA?t=2Ot6p6U0Kg2sFeUE-1" target="_blank" class="btn-glow inline-block px-6 py-2 bg-blue-600/80 hover:bg-blue-600 rounded-full text-sm font-semibold transition">
+                                <i class="fab fa-figma mr-2"></i>View Design
+                            </a>
+                            <a href="https://drive.google.com/file/d/1MtQ5Omi_jaNBoZHYLu6F_J4DEbOLKq6w/view?usp=drive_link" target="_blank" class="btn-glow inline-block px-6 py-2 glass rounded-full text-sm font-semibold hover:bg-white/10">
+                                <i class="fab fa-google-drive mr-2"></i>Google Drive
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -570,11 +684,16 @@
     <!-- Technical Skills Section -->
     <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
-                <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Technical Skills
-                </span>
-            </h2>
+            <div class="relative text-center mb-16" data-aos="fade-up">
+                <h2 class="text-8xl md:text-9xl font-bold text-white/5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+                    Skills
+                </h2>
+                <h2 class="text-4xl md:text-5xl font-bold relative z-10 mb-2">
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        Technical Skills
+                    </span>
+                </h2>
+            </div>
             
             <div class="max-w-3xl mx-auto">
                 
@@ -651,11 +770,16 @@
     <!-- Certifications Section -->
     <section id="certifications" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
-                <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <div class="relative text-center mb-16" data-aos="fade-up">
+                <h2 class="text-8xl md:text-9xl font-bold text-white/5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
                     Certifications
-                </span>
-            </h2>
+                </h2>
+                <h2 class="text-4xl md:text-5xl font-bold relative z-10 mb-2">
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        Certifications
+                    </span>
+                </h2>
+            </div>
             
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
                 
@@ -754,13 +878,16 @@
     <section id="contact" class="py-20">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8">
+                <div class="relative text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-8xl md:text-9xl font-bold text-white/5 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+                        Contact
+                    </h2>
+                    <h2 class="text-4xl md:text-5xl font-bold relative z-10 mb-8 mt-8">
                         <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                             Let's Collaborate!
                         </span>
                     </h2>
-                    <p class="text-gray-300 text-base leading-relaxed mb-12">
+                    <p class="text-gray-300 text-base leading-relaxed mb-12 relative z-10">
                         I'm open to project collaboration, internships, or career opportunities in AI, Web Development, and Information Systems. Let's create impactful technology solutions together!
                     </p>
                 </div>
@@ -907,6 +1034,38 @@
                 navbar.style.background = 'rgba(10, 10, 10, 0.8)';
             }
         });
+        
+        // Professional Smoke Effect
+        let lastSmokeTime = 0;
+        const smokeDelay = 40;
+        
+        document.addEventListener('mousemove', (e) => {
+            const currentTime = Date.now();
+            
+            // Create smoke trail
+            if (currentTime - lastSmokeTime > smokeDelay) {
+                createSmoke(e.clientX, e.clientY);
+                lastSmokeTime = currentTime;
+            }
+        });
+        
+        function createSmoke(x, y) {
+            const smoke = document.createElement('div');
+            smoke.className = 'cursor-smoke';
+            smoke.style.left = x + 'px';
+            smoke.style.top = y + 'px';
+            
+            // Random rotation and size for organic smoke effect
+            const rotation = Math.random() * 30 - 15;
+            const scale = 0.8 + Math.random() * 0.4;
+            smoke.style.transform = `translate(-50%, -50%) rotate(${rotation}deg) scale(${scale})`;
+            
+            document.body.appendChild(smoke);
+            
+            setTimeout(() => {
+                smoke.remove();
+            }, 1200);
+        }
     </script>
 </body>
 </html>
